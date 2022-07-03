@@ -535,6 +535,7 @@ body {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   transition: all 0.4s;
+  text-align: center;
 }
 .title-secondary:hover {
   transform: skewY(2deg) skewX(15deg) scale(1, 1);
@@ -546,6 +547,16 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+}
+
+.title-fourth {
+  font-weight: 300;
+  font-size: 2.8rem;
+  line-height: 3.4rem;
+  text-align: right;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #BA8554 0%, #A14F03 100%);
+  color: #FAFAFA;
 }
 
 .paragrath {
@@ -689,6 +700,7 @@ body {
   border-radius: 0.5rem;
   padding: 2rem;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 .card-adventure:hover {
   transform: translateY(-1rem);
@@ -702,6 +714,66 @@ body {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   display: inline-block;
+}
+
+.card-price {
+  position: relative;
+  height: 52rem;
+  text-align: center;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+}
+.card-price__side {
+  height: 52rem;
+  width: 100%;
+  transition: all 0.7s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.card-price__side_front {
+  background: white;
+}
+.card-price__side_front__photo {
+  width: 100%;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+}
+.card-price__side_front__title {
+  position: absolute;
+  top: 18rem;
+  right: 0;
+}
+.card-price__side_front__text {
+  font-weight: 700;
+  line-height: 3.6rem;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+.card-price__side_back {
+  background: linear-gradient(120deg, rgba(186, 133, 84, 0.7) 0%, rgba(161, 79, 3, 0.7) 100%);
+  transform: rotateY(180deg);
+  padding-top: 10rem;
+}
+.card-price__side_back__text {
+  font-weight: 300;
+  color: #FAFAFA;
+  margin-bottom: 10rem;
+}
+.card-price__side_back__price {
+  font-weight: 500;
+  font-size: 6rem;
+  text-transform: uppercase;
+  color: #FAFAFA;
+  margin-bottom: 9rem;
+}
+.card-price:hover .card-price__side_front {
+  transform: rotateY(180deg);
+}
+.card-price:hover .card-price__side_back {
+  transform: rotateY(0deg);
 }
 
 .header {
@@ -781,4 +853,8 @@ body {
 }
 .second-adventure > * {
   transform: skewY(-7deg);
+}
+
+.section-price {
+  padding-top: 8rem;
 }/*# sourceMappingURL=style.css.map */
