@@ -28,3 +28,17 @@ body
         animation-fill-mode: backwards
         backface-visibility: hidden
         margin-bottom: 65px
+
+.title-secondary
+    font-size: 3.6rem
+    letter-spacing: 1rem
+    font-weight: 800
+    text-transform: uppercase
+    background: linear-gradient(90deg, rgba($color-brown-light, 0.7) 0%, rgba($color-brown-dark, 0.7) 100%)
+    -webkit-background-clip: text
+    color: transparent
+    backface-visibility: hidden
+    transition: all .4s
+    &:hover
+        transform: skewY(2deg) skewX(15deg) scale(1,1)
+        text-shadow: 0 .4rem .4rem rgba($color-black, .25)
