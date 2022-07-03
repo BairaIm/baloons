@@ -541,8 +541,31 @@ body {
   text-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
 }
 
+.title-third {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.paragrath {
+  line-height: 140%;
+}
+
 .text-align-center {
   text-align: center;
+}
+
+.margin-bottom-10px {
+  margin-bottom: 1rem;
+}
+
+.margin-bottom-30px {
+  margin-bottom: 3rem;
+}
+
+.margin-bottom-50px {
+  margin-bottom: 5rem;
 }
 
 .margin-bottom-80px {
@@ -597,6 +620,59 @@ body {
           animation-fill-mode: backwards;
 }
 
+.btn-text:link, .btn-text:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 1.9rem;
+  color: #A14F03;
+  padding: 1rem;
+  border-bottom: 0.1rem solid #A14F03;
+  transition: all 0.5s;
+}
+.btn-text:hover {
+  background: #BA8554;
+  color: #FAFAFA;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  transform: translateY(-0.2rem);
+  border-radius: 1rem;
+}
+.btn-text:active {
+  transform: translateY(0);
+}
+
+.composition {
+  position: relative;
+}
+.composition__photo {
+  width: 60%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  position: absolute;
+  transition: all 0.5s;
+  outline-offset: 1rem;
+}
+.composition__photo_n1 {
+  top: 0;
+  left: 1rem;
+}
+.composition__photo_n2 {
+  top: 9rem;
+  left: 23.1rem;
+}
+.composition__photo_n3 {
+  top: 16.4rem;
+  left: 3.2rem;
+}
+.composition__photo:hover {
+  outline: 1rem solid #BA8554;
+  transform: scale(1.1);
+  z-index: 20;
+}
+.composition:hover .composition__photo:not(:hover) {
+  transform: scale(0.9);
+}
+
 .header {
   position: relative;
   height: 95vh;
@@ -622,7 +698,6 @@ body {
 
 .row {
   max-width: 114rem;
-  background: blue;
   margin: 0 auto;
 }
 .row:not(:last-child) {
@@ -635,7 +710,6 @@ body {
 }
 
 [class^=col-] {
-  background: green;
   float: left;
 }
 [class^=col-]:not(:last-child) {
