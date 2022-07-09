@@ -541,6 +541,9 @@ body {
   transform: skewY(2deg) skewX(15deg) scale(1, 1);
   text-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
 }
+.title-secondary_white {
+  color: #FAFAFA;
+}
 
 .title-third {
   font-size: 2rem;
@@ -808,10 +811,58 @@ body {
   text-align: center;
 }
 
+.card-review {
+  width: 80%;
+  background: rgba(250, 250, 250, 0.75);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  padding: 6rem;
+  transform: skewX(-15deg);
+}
+.card-review > * {
+  transform: skewX(15deg);
+}
+.card-review__img {
+  width: 15rem;
+  height: 15rem;
+  background: green;
+  float: left;
+  border-radius: 100rem;
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  margin-right: 4rem;
+  overflow: hidden;
+  position: relative;
+}
+.card-review__img img {
+  height: 100%;
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+.card-review__name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  text-align: center;
+  color: #FAFAFA;
+  font-size: 2rem;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.card-review:hover .card-review__name {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+.card-review:hover img {
+  transform: scale(1);
+  filter: blur(0.3rem) brightness(70%);
+}
+
 .header {
   position: relative;
   height: 95vh;
-  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url("../img/header-background.jpg") center/cover no-repeat;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("../img/header-background.jpg") center/cover no-repeat;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
   margin-bottom: 8rem;
@@ -878,7 +929,7 @@ body {
 .second-adventure {
   position: relative;
   height: 95vh;
-  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url("../img/second-section-background.png") center/cover no-repeat;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("../img/second-section-background.png") center/cover no-repeat;
   margin-bottom: 8rem;
   transform: skewY(7deg);
   padding-top: 17rem;
@@ -888,5 +939,9 @@ body {
 }
 
 .section-price {
+  padding: 8rem 0;
+}
+
+.section-review {
   padding: 8rem 0;
 }/*# sourceMappingURL=style.css.map */
