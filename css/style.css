@@ -480,7 +480,7 @@ body {
 }
 
 .container {
-  background-color: #E9E9E9;
+  background-color: #efefef;
 }
 
 body {
@@ -888,5 +888,5 @@ body {
 }
 
 .section-price {
-  padding-top: 8rem;
+  padding: 8rem 0;
 }/*# sourceMappingURL=style.css.map */
