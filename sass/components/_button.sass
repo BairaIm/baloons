@@ -14,6 +14,7 @@
         display: inline-block
         transition: all .3s
         position: relative
+        box-shadow: $shadow
     &:hover
         transform: translateY(-.4rem)
         box-shadow: $shadow
@@ -22,7 +23,7 @@
             transform: scaleX(1.5) scaleY(1.7)
     &:active
         transform: translateY(-.2rem)
-        box-shadow: $shadow
+        
     &::after
         content: ""
         background: $color-white

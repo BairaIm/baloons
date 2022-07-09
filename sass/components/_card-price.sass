@@ -12,35 +12,69 @@
         top: 0
         left: 0
         backface-visibility: hidden
+        box-shadow: $shadow
+        border-radius: 0.5rem
+        overflow: hidden
         &_front
             background: white
-            &__photo
-                width: 100%
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%)
-            &__title
-                position: absolute
-                top: 18rem
-                right: 0
-            &__text
-                font-weight: 700
-                line-height: 3.6rem
-                text-decoration-line: underline
         &_back
             background: linear-gradient(120deg, rgba($color-brown-light, 0.7) 0%, rgba($color-brown-dark, 0.7) 100%)
             transform: rotateY(180deg)
             padding-top: 10rem
-            &__text
-                font-weight: 300
-                color: $color-white
-                margin-bottom: 10rem
-            &__price
-                font-weight: 500
-                font-size: 6rem
-                text-transform: uppercase
-                color: $color-white
-                margin-bottom: 9rem
 
     &:hover &__side_front
-        transform: rotateY(180deg)
+        transform: rotateY(-180deg)
     &:hover &__side_back
         transform: rotateY(0deg)
+
+    &__img
+        height: 21rem
+        background-blend-mode: hard-light
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%)
+        &_n1
+            background: $color-brown-light url('../img/section-price-photo(1).png') center / cover no-repeat
+        &_n2
+            background: $color-brown-light url('../img/section-price-photo(2).png') center / cover no-repeat
+        &_n3
+            background: $color-brown-light url('../img/section-price-photo(3).png') center / cover no-repeat
+    &__span
+        background: linear-gradient(90deg, $color-brown-light, $color-brown-dark)
+        padding: 1rem 2rem .5rem 2rem
+        &_n1
+            position: absolute
+            top: 15.5rem
+            right: 0
+        &_n2
+            position: absolute
+            top: 19.5rem
+            right: 0
+
+    &__description
+        ul
+            li
+                font-weight: 700
+                text-decoration: underline
+                text-underline-offset: 0.2rem
+                &:not(:last-child)
+                    margin-bottom: 2rem
+
+    &__text
+        color: $color-white
+        margin-bottom: 8rem
+        text-align: center
+
+        &_fullprice
+            font-weight: 300
+        &_price
+            font-weight: 500
+            font-size: 60px
+            line-height: 72px
+
+
+    &__backSide-box
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 100%
+        text-align: center
