@@ -1,0 +1,81 @@
+.book
+    height: 50rem
+    background: linear-gradient(115deg, rgba($color-white, 0.9) 0%, rgba($color-white, 0.8) 56%, rgba($color-brown-light, 0.9) 56%, rgba($color-brown-dark, 0.8) 100%), url('../img/form.png') center / cover no-repeat
+    box-shadow: $shadow
+    border-radius: .5rem
+    overflow: hidden
+
+.form
+    width: 75%
+    padding-top: 5rem
+    padding-left: 5rem
+
+    &__group:not(:last-child)
+        margin-bottom: 2rem
+
+    &__group:nth-child(4)
+        margin-bottom: 4rem
+
+    &__input
+        color: black
+        background: $color-white
+        padding: 2rem 0 2rem 2rem
+        border: none
+        border-bottom: .3rem solid transparent
+        border-radius: .5rem
+        width: 50%
+        margin-bottom: 1rem
+        &:focus
+            outline: none
+            border-bottom: .3rem solid green
+            box-shadow: $shadow
+        &:focus:invalid
+            border-bottom: .3rem solid red
+
+    &__label
+        display: block
+        margin-left: 1.5rem
+        transition: .3s all
+
+    &__input:placeholder-shown + &__label
+        opacity: 0
+        visibility: none
+        transform: translateY(-3rem)
+
+    &__group-radio
+        width: 35%
+        display: inline-block
+    
+    &__input-radio
+        display: none
+
+    &__label-radio
+        cursor: pointer
+        position: relative
+        padding-left: 3.5rem
+
+    &__button-radio
+        height: 3rem
+        width: 3rem
+        border-radius: 50%
+        border: .5rem solid $color-brown-light
+        display: block
+        position: absolute
+        top: -.7rem
+        left: 0rem
+        &::after
+            content: ""
+            display: block
+            height: 1.5rem
+            width: 1.5rem
+            border-radius: 50%
+            background: $color-brown-light
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            opacity: 0
+            transition: .2rem all
+
+    &__input-radio:checked ~ &__label-radio &__button-radio::after
+        opacity: 1
