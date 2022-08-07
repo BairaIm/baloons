@@ -13,6 +13,22 @@
 
 <body>
     <div class="container">
+        <div class="navigation">
+            <input type="checkbox" class="navigation__toggle" id="navi-toggle">
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon"></span>
+            </label>
+            <div class="navigation__background"></div>
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link">О нас</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Скидки</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Лучшие туры</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Калькулятор цены</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Связаться с нами</a></li>
+                </ul>
+            </nav>
+        </div>
         <!-- Заголовок сайта -->
         <header class="header">
             <img src="icons/Icon-logo.svg" alt="Логотип воздушный шар" class="header__logo">
@@ -27,6 +43,7 @@
             </div>
         </header>
 
+        <!-- Основной раздел сайта -->
         <main>
             <!-- Секция с описанием -->
             <section class="section_about">
@@ -149,7 +166,7 @@
                                 <p class="card-price__text card-price__text_price">
                                     5990&#8381;
                                 </p>
-                                <a href="#" class="btn">
+                                <a href="#booking" class="btn">
                                     Забронировать
                                 </a>
                             </div>
@@ -183,7 +200,7 @@
                                 <p class="card-price__text card-price__text_price">
                                     5990&#8381;
                                 </p>
-                                <a href="#" class="btn">
+                                <a href="#booking" class="btn">
                                     Забронировать
                                 </a>
                             </div>
@@ -217,7 +234,7 @@
                                 <p class="card-price__text card-price__text_price">
                                     5990&#8381;
                                 </p>
-                                <a href="#" class="btn">
+                                <a href="#booking" class="btn">
                                     Забронировать
                                 </a>
                             </div>
@@ -225,7 +242,7 @@
                     </div>
                 </div>
                 <div class="text-align-center">
-                    <a href="#" class="btn">
+                    <a href="#booking" class="btn">
                         Забронировать
                     </a>
                 </div>
@@ -275,14 +292,14 @@
                     </div>
                 </div>
                 <div class="text-align-center">
-                    <a href="#" class="btn">
+                    <a href="#booking" class="btn">
                         Забронировать
                     </a>
                 </div>
             </section>
 
             <!-- Форма для брони -->
-            <section class="section-book">
+            <section class="section-book" id="booking">
                 <div class="row">
                     <div class="book">
                         <div class="book__form">
@@ -323,6 +340,23 @@
                 </div>
             </section>
         </main>
+
+        <!-- Подваль сайта -->
+        <footer class="footer">
+            <div class="row">
+                <a href="#">
+                    <img src="icons/Icon-logo.svg" alt="logo" class="footer__logo"></a>
+            </div>
+            <div class="row">
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#" class="footer__link">О нас</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Скидки</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Лучшие туры</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Калькулятор цены</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Связаться с нами</a></li>
+                </ul>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
