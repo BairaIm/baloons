@@ -29,14 +29,28 @@
 
     &__img
         height: 21rem
+        @include respond(phone)
+            height: 28rem
         background-blend-mode: hard-light
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%)
         &_n1
-            background: $color-brown-light url('../img/section-price-photo(1).png') center / cover no-repeat
+            background: $color-brown-light url('../img/section-price-photo(1)-middle.png') center / cover no-repeat
+            @media (min-resolution: 192dpi) and (min-width: 300px), (min-width: 600px)
+                background: $color-brown-light url('../img/section-price-photo(1)-small.png') center / cover no-repeat
+            @media (min-resolution: 192dpi) and (min-width: 600px), (min-width: 1240px)
+                background: $color-brown-light url('../img/section-price-photo(1).png') center / cover no-repeat
         &_n2
-            background: $color-brown-light url('../img/section-price-photo(2).png') center / cover no-repeat
+            background: $color-brown-light url('../img/section-price-photo(2)-small.png') center / cover no-repeat
+            @media (min-resolution: 192dpi) and (min-width: 300px), (min-width: 600px)
+                background: $color-brown-light url('../img/section-price-photo(2)-small.png') center / cover no-repeat
+            @media (min-resolution: 192dpi) and (min-width: 600px), (min-width: 1240px)
+                background: $color-brown-light url('../img/section-price-photo(2).png') center / cover no-repeat
         &_n3
-            background: $color-brown-light url('../img/section-price-photo(3).png') center / cover no-repeat
+            background: $color-brown-light url('../img/section-price-photo(3)-small.png') center / cover no-repeat
+            @media (min-resolution: 192dpi) and (min-width: 300px), (min-width: 600px)
+                background: $color-brown-light url('../img/section-price-photo(3)-small.png') center / cover no-repeat
+            @media (min-resolution: 192dpi) and (min-width: 600px), (min-width: 1240px)
+                background: $color-brown-light url('../img/section-price-photo(3).png') center / cover no-repeat
     &__span
         background: linear-gradient(90deg, $color-brown-light, $color-brown-dark)
         padding: 1rem 2rem .5rem 2rem
@@ -44,10 +58,14 @@
             position: absolute
             top: 15.5rem
             right: 0
+            @include respond(phone)
+                top: 22.5rem
         &_n2
             position: absolute
             top: 19.5rem
             right: 0
+            @include respond(phone)
+                top: 26.5rem
 
     &__description
         ul
@@ -57,6 +75,9 @@
                 text-underline-offset: 0.2rem
                 &:not(:last-child)
                     margin-bottom: 2rem
+                    @include respond(phone)
+                        margin-bottom: 1rem
+                    
 
     &__text
         color: $color-white
