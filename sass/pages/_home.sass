@@ -1,5 +1,18 @@
+.section-about
+    padding: 8rem 0
+    margin-bottom: 10rem
+    min-height: 46rem
+    @include respond(tab-land)
+        padding: 4rem 0
+        margin-bottom: 6rem
+    @include respond(tab-port)
+        min-height: 106rem
+    @include respond(phone)
+        min-height: 115rem
+
 .second-adventure
     position: relative
+    min-height: 48rem
     height: 95vh
     background: linear-gradient(90deg, rgba($color-brown-light, 0.5) 0%, rgba($color-black, 0.5) 100%), url('../img/second-section-background.png') center / cover no-repeat
     margin-bottom: 8rem
@@ -7,15 +20,36 @@
     padding-top: 17rem
     & > *
         transform: skewY(-7deg)
+    @include respond(tab-land)
+        padding-top: 9rem
+        margin-bottom: 4rem
+    @include respond(tab-port)
+        min-height: 80rem
+    @include respond(phone)
+        min-height: 145rem
 
 .section-price
+    min-height: 46rem
     padding: 8rem 0
+    @include respond(tab-land)
+        padding: 6rem 0
+    @include respond(tab-port)
+        min-height: 100rem
 
 .section-review
+    min-height: 46rem
     padding: 8rem 0
     position: relative
+    @include respond(tab-land)
+        padding: 6rem 0
+    @include respond(tab-port)
+        min-height: 100rem
 
 .section-book
+    min-height: 46rem
     padding: 10rem
     background: linear-gradient(90deg, $color-brown-light, $color-brown-dark)
-
+    @include respond(tab-land)
+        padding: 6rem
+    @include respond(tab-port)
+        padding: 3rem

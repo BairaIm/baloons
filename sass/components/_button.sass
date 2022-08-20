@@ -16,6 +16,11 @@
         position: relative
         box-shadow: $shadow
         border: none
+        @include respond(tab-land)
+            font-size: 1.8rem
+            padding: 1rem 2rem
+        @include respond(tab-port)
+            padding: 1rem 1rem
     &:hover
         transform: translateY(-.4rem)
         box-shadow: $shadow
@@ -45,6 +50,5 @@
     &, &:link, &:visited
         color: white
         background: $color-brown-light
-    &:hover
     &::after
         background: $color-brown-light

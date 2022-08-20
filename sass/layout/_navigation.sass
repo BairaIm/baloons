@@ -13,7 +13,12 @@
         z-index: 110
         text-align: center
         cursor: pointer
-
+        box-shadow: $shadow
+        @include respond(tab-land)
+            height: 6rem
+            width: 6rem
+            right: 6rem
+            top: 6rem
     &__background
         width: 5.5rem
         height: 5.5rem
@@ -24,7 +29,11 @@
         top: 10.8rem
         z-index: 100
         transition: .7s all
-
+        @include respond(tab-land)
+            height: 4rem
+            width: 4rem
+            right: 6.5rem
+            top: 6.5rem
     &__nav
         height: 100vh
         position: fixed
@@ -33,7 +42,7 @@
         z-index: 105
 
         opacity: 0
-        width: 0
+        width: 0%
         transition: .7s all cubic-bezier(0.68, -0.6, 0.32, 1.6)
 
     &__list
@@ -41,6 +50,8 @@
         position: absolute
         top: 50%
         left: 50%
+        width: 0
+        opacity: 0
         transform: translate(-50%, -50%)
 
     &__item
@@ -48,6 +59,12 @@
         width: 100%
         &:not(:last-child)
             margin-bottom: 5rem
+            @include respond(tab-land)
+                margin-bottom: 4rem
+            @include respond(tab-port)
+                margin-bottom: 3rem
+            @include respond(phone)
+                margin-bottom: 2rem
 
     &__link
         &:link, &:visited
@@ -61,7 +78,13 @@
             padding: 1rem 2rem
             transition: .4s all
             display: inline-block
-        
+            @include respond(tab-land)
+                font-size: 3.5rem
+            @include respond(tab-port)
+                font-size: 3rem
+            @include respond(phone)
+                font-size: 2.5rem
+
         &:hover, &:active
             background-position: 100%
             color: $color-brown-dark
@@ -73,13 +96,19 @@
     &__toggle:checked ~ &__nav
         width: 100%
         opacity: 1
-    
+
+    &__toggle:checked ~ &__nav &__list
+        width: 100%
+        opacity: 1
+        
     &__icon
-        margin-top: 35px
+        margin-top: 3.5rem
         position: relative
+        @include respond(tab-land)
+            margin-top: 3rem
         &, &::before, &::after
-            width: 30px
-            height: 2px
+            width: 3rem
+            height: .2rem
             background: $color-black
             display: inline-block
         &::before, &::after
@@ -88,15 +117,16 @@
             left: 0
             transition: .2s all
         &::before
-            top: -10px
+            top: -1rem
         &::after
-            top: 10px
-    
-    &__button:hover &__icon::before
-        top: -12px
-    &__button:hover &__icon::after
-        top: 12px
+            top: 1rem
 
+
+    &__button:hover &__icon::before
+        top: -1.2rem
+    &__button:hover &__icon::after
+        top: 1.2rem
+        
     &__toggle:checked + &__button &__icon
         background: transparent
     &__toggle:checked + &__button &__icon::before

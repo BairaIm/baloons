@@ -4,14 +4,27 @@
     box-shadow: $shadow
     border-radius: .5rem
     overflow: hidden
-
+    @include respond(tab-port)
+        background: linear-gradient(100deg, rgba($color-white, 0.9) 0%, rgba($color-white, 0.7) 66%, rgba($color-brown-light, 0.7) 66%, rgba($color-brown-dark, 0.7) 100%), url('../img/form.png') center / cover no-repeat
+    @include respond(phone)
+        background: linear-gradient(100deg, rgba($color-white, 0.9) 0%, rgba($color-white, 0.7) 660%, rgba($color-brown-light, 0.7) 660%, rgba($color-brown-dark, 0.7) 100%), url('../img/form.png') center / cover no-repeat
 .form
     width: 70%
     padding-top: 5rem
     padding-left: 5rem
+    @include respond(phone)
+        width: 100%
+        padding-top: 2rem
+        padding-left: 0rem
+    
+    &__group
+        @include respond(phone)
+            padding-left: 2rem
 
     &__group:not(:last-child)
         margin-bottom: 2rem
+        @include respond(tab-land)
+            margin-bottom: 1rem
 
     &__group:nth-child(4)
         margin-bottom: 4rem
@@ -25,6 +38,11 @@
         border-radius: .5rem
         width: 50%
         margin-bottom: 1rem
+        box-shadow: $shadow
+        @include respond(tab-port)
+            width: 80%
+        @include respond(phone)
+            width: 90%
         &:focus
             outline: none
             border-bottom: .3rem solid green
@@ -43,8 +61,12 @@
         transform: translateY(-3rem)
 
     &__group-radio
-        width: 35%
         display: inline-block
+        &:not(:last-child)
+            margin-right: 2rem
+        @include respond(tab-land)
+            display: block
+            margin-bottom: 2rem
     
     &__input-radio
         display: none

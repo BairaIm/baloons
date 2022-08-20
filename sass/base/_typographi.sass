@@ -4,6 +4,10 @@ body
     color: $color-grey
     font-size: $font-size-paragrath
     letter-spacing: .2rem
+    @include respond(tab-land)
+        font-size: 1.5rem
+    @include respond(tab-port)
+        font-size: 1.8rem
 
 .title-first
     color: #FFFFFF
@@ -18,6 +22,12 @@ body
         animation: LeftToRight .7s ease .7s
         animation-fill-mode: backwards
         backface-visibility: hidden
+        @include respond(tab-land)
+            font-size: 4rem
+        @include respond(tab-port)
+            font-size: 2.9rem
+        @include respond(phone)
+            letter-spacing: .7rem
     &__secondary
         display: block
         font-weight: 100
@@ -27,8 +37,15 @@ body
         animation: RightToLeft .7s ease .7s
         animation-fill-mode: backwards
         backface-visibility: hidden
-        margin-bottom: 65px
-
+        margin-bottom: 6.5rem
+        @include respond(tab-land)
+            font-size: 3.5rem
+            margin-bottom: 4rem
+        @include respond(tab-port)
+            font-size: 2.5rem
+            margin-bottom: 3rem
+        @include respond(phone)
+            letter-spacing: .4rem
 .title-secondary
     font-size: $font-size-h2
     letter-spacing: 1rem
@@ -40,6 +57,13 @@ body
     backface-visibility: hidden
     transition: all .4s
     text-align: center
+    @include respond(tab-land)
+        font-size: 3rem
+    @include respond(tab-port)
+        font-size: 2.6rem
+    @include respond(phone)
+        font-size: 2.5rem
+        letter-spacing: .5rem
     &:hover
         transform: skewY(2deg) skewX(15deg) scale(1,1)
         text-shadow: 0 .4rem .4rem rgba($color-black, .25)
@@ -51,6 +75,8 @@ body
     font-weight: 700
     text-transform: uppercase
     letter-spacing: .2rem
+    @include respond(tab-land)
+        font-size: 2rem
 
 .title-fourth
     font-weight: 300
